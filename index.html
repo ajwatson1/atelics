@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-serif: 'Lora', Georgia, serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --bg: #ffffff;
+    --ink: #26200f;
+    --ink-light: #8a7e64;
+    --ink-faint: #c0ae90;
+    --terracotta: #b87050;
+    --terracotta-light: #d4a48a;
+  }
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-serif);
+    font-size: 17.5px;
+    font-weight: 400;
+    line-height: 1.82;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 120px 28px 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entry {
+    margin-bottom: 56px;
+  }
+
+  .word {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .pronunciation {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+
+  .pos {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 16px;
+  }
+
+  .rule {
+    width: 60px;
+    height: 1px;
+    background: var(--terracotta);
+    margin-bottom: 20px;
+  }
+
+  .definition {
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .example {
+    font-size: 15.5px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+
+  .origin {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.01em;
+  }
+
+  .origin span {
+    font-style: italic;
+  }
+
+  .section-label {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .work-list {
+    list-style: none;
+    margin-bottom: 64px;
+  }
+
+  .work-list li {
+    margin-bottom: 28px;
+  }
+
+  .work-list a {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+  }
+
+  .work-list a:hover {
+    color: var(--terracotta);
+  }
+
+  .work-desc {
+    font-size: 14.5px;
+    color: var(--ink-light);
+    line-height: 1.6;
+    margin-top: 4px;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  @media (max-width: 600px) {
+    .page {
+      padding: 80px 24px 60px;
+    }
+
+    .word {
+      font-size: 34px;
+    }
+
+    .definition {
+      font-size: 17px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="entry">
+    <h1 class="word">Atelics</h1>
+    <p class="pronunciation">/æˈtɛl.ɪks/</p>
+    <p class="pos">noun, plural</p>
+    <div class="rule"></div>
+    <p class="definition">Activities performed for their own sake, without a fixed endpoint. The doing is the point.</p>
+  </div>
+
+  <ul class="work-list">
+    <li>
+      <a href="/margin/">Margin</a>
+      <p class="work-desc">A story where everything gets better and nobody's happy about it.</p>
+    </li>
+  </ul>
+
+  <div class="spacer"></div>
+
+</div>
+</body>
+</html>
