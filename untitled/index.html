@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled — A.W.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --ink: #26200f;
+            --ink-light: #8a7e64;
+            --ink-faint: #c0ae90;
+            --terracotta: #b87050;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--ink);
+            font-family: 'Lora', Georgia, serif;
+            font-size: 17.5px;
+            font-weight: 400;
+            line-height: 1.82;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .header {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .header-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 34px;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .header-byline {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--ink-faint);
+            letter-spacing: 0.01em;
+        }
+
+        .spacer {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg);
+            position: relative;
+        }
+
+        .spacer::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background-color: var(--terracotta);
+            opacity: 0.25;
+        }
+
+        .poem-section {
+            width: 100%;
+            padding: 80px 40px;
+            max-width: 100%;
+        }
+
+        .poem-content {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .poem-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 21px;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+            margin-bottom: 36px;
+        }
+
+        .poem-body {
+            transition: opacity 0.6s ease;
+        }
+
+        .stanza {
+            margin-bottom: 32px;
+        }
+
+        .line {
+            display: block;
+        }
+
+        /* Both, and — side-by-side diptych */
+        .poem-4 .poem-content {
+            max-width: 900px;
+        }
+
+        .poem-4 .poem-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .poem-4 .section-number {
+            font-weight: 500;
+            margin-bottom: 24px;
+            display: block;
+            font-size: 17.5px;
+        }
+
+        .poem-4 .section .stanza {
+            margin-bottom: 28px;
+        }
+
+        .poem-4 .section .stanza:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 28px;
+            }
+
+            .poem-section {
+                padding: 50px 24px;
+            }
+
+            .poem-title {
+                font-size: 19px;
+            }
+
+            body {
+                font-size: 16.5px;
+            }
+
+            .spacer {
+                height: 20vh;
+            }
+
+            .poem-4 .poem-body {
+                display: block;
+            }
+
+            .poem-4 .section {
+                margin-bottom: 56px;
+            }
+
+            .poem-4 .section:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <section class="header">
+        <div class="header-title">Untitled</div>
+        <div class="header-byline">A.W.</div>
+    </section>
+
+    <!-- Spacer 1 -->
+    <div class="spacer"></div>
+
+    <!-- Poem 1: Unveiling -->
+    <section class="poem-section poem-1" id="unveiling">
+        <div class="poem-content">
+            <h2 class="poem-title">Unveiling</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="line">I had been walking with my eyes closed,</span>
+                    <span class="line">calling it night.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Had been breathing through cloth,</span>
+                    <span class="line">naming it air.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Had been hearing through water,</span>
+                    <span class="line">thinking it silence.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">When the veil lifted—</span>
+                    <span class="line">not torn but dissolved</span>
+                    <span class="line">like morning mist that was never there—</span>
+                    <span class="line">I saw how the trees had been dancing,</span>
+                    <span class="line">how they had always been dancing,</span>
+                    <span class="line">how the stones rang like bells</span>
+                    <span class="line">and had never stopped ringing,</span>
+                    <span class="line">how even my own hands</span>
+                    <span class="line">had been burning with light</span>
+                    <span class="line">while I named them shadow.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">O, that quiet laugh of discovering</span>
+                    <span class="line">that one has been swimming in sunshine</span>
+                    <span class="line">while mourning the darkness,</span>
+                    <span class="line">has been standing in summer</span>
+                    <span class="line">while shivering at a phantom snow,</span>
+                    <span class="line">has been crowned with morning</span>
+                    <span class="line">while waiting for dawn.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">How many gardens have I passed through</span>
+                    <span class="line">believing them graves?</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">How many feasts have I sat at</span>
+                    <span class="line">tasting only ash?</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">How many songs have I sung</span>
+                    <span class="line">thinking them sighs?</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">It was not the light that changed—</span>
+                    <span class="line">(it never changes)</span>
+                    <span class="line">but these eyes, scaled like fish,</span>
+                    <span class="line">finally remembered</span>
+                    <span class="line">they were made for seeing.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Now in the forgetting</span>
+                    <span class="line">(must I always forget?)</span>
+                    <span class="line">my bones grow cold again,</span>
+                    <span class="line">though my mind holds the shape</span>
+                    <span class="line">of that ancient brightness</span>
+                    <span class="line">like a blind man's memory</span>
+                    <span class="line">of the sun.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">I whisper to myself</span>
+                    <span class="line">how darkness is only</span>
+                    <span class="line">my closed eyes,</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">how silence is only</span>
+                    <span class="line">my covered ears,</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">how winter is only</span>
+                    <span class="line">my turned face—</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">But knowledge is not knowing,</span>
+                    <span class="line">and though I walk these shadows</span>
+                    <span class="line">(what I again name shadows)</span>
+                    <span class="line">clutching that remembered light</span>
+                    <span class="line">like a dried flower,</span>
+                    <span class="line">my hands remember less</span>
+                    <span class="line">with every step.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacer 2 -->
+    <div class="spacer"></div>
+
+    <!-- Poem 2: Settling -->
+    <section class="poem-section poem-3" id="settling">
+        <div class="poem-content">
+            <h2 class="poem-title">Settling</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="line">The air changes texture,</span>
+                    <span class="line">subtle as evening shade—</span>
+                    <span class="line">nothing you could name,</span>
+                    <span class="line">nothing you could prove.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">A weight begins to settle like dew,</span>
+                    <span class="line">silent in its arrival,</span>
+                    <span class="line">barely felt at first—</span>
+                    <span class="line">just a dampness on the skin.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">The light occasionally hesitates</span>
+                    <span class="line">before touching ground,</span>
+                    <span class="line">as if considering</span>
+                    <span class="line">a different path entirely.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Days pass, or perhaps weeks,</span>
+                    <span class="line">before it begins to seep,</span>
+                    <span class="line">not yet through bone,</span>
+                    <span class="line">just settling in the hollows</span>
+                    <span class="line">of collar and shoulder blade.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Shadows stretch longer now,</span>
+                    <span class="line">but only in peripheral vision,</span>
+                    <span class="line">only when you're not quite looking.</span>
+                    <span class="line">When you turn to face them,</span>
+                    <span class="line">they remember their proper shape.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">The dampness finds its way deeper,</span>
+                    <span class="line">past muscle, between ribs,</span>
+                    <span class="line">no longer morning dew</span>
+                    <span class="line">but something older, darker.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">And the weight builds —</span>
+                    <span class="line">incremental changes,</span>
+                    <span class="line">each drop unremarkable,</span>
+                    <span class="line">until standing becomes</span>
+                    <span class="line">an act of defiance.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">The darkness begins to gather,</span>
+                    <span class="line">patient as winter,</span>
+                    <span class="line">deep as old wells.</span>
+                    <span class="line">It waits in corners first,</span>
+                    <span class="line">then closer, closer, closer still.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">The edges soften imperceptible.</span>
+                    <span class="line">Then the center bleeds.</span>
+                    <span class="line">Pores open to drink shadow</span>
+                    <span class="line">until skin forgets</span>
+                    <span class="line">it was ever dry.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">The drowning comes slow:</span>
+                    <span class="line">first in the corners of eyes,</span>
+                    <span class="line">then in the spaces between thoughts,</span>
+                    <span class="line">until every breath</span>
+                    <span class="line">holds more water than air.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Only now does the body notice.</span>
+                    <span class="line">The ancient urgent ache of waiting.</span>
+                    <span class="line">Pinned painful to bedrock</span>
+                    <span class="line">amidst fathomless depths.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacer 4 -->
+    <div class="spacer"></div>
+
+    <!-- Poem 4: Both, and -->
+    <section class="poem-section poem-4" id="both-and">
+        <div class="poem-content">
+            <h2 class="poem-title">Both, and</h2>
+            <div class="poem-body">
+                <div class="section">
+                    <span class="section-number">I.</span>
+                    <div class="stanza">
+                        <span class="line">In the garden, the man prays alone</span>
+                        <span class="line">In prayer, meeting only silence</span>
+                        <span class="line">In darkness, God's face turned away</span>
+                        <span class="line">In waiting, crushed</span>
+                        <span class="line">In spirit, winter-dead</span>
+                        <span class="line">In presence, only void</span>
+                        <span class="line">In absence, utterly lost</span>
+                        <span class="line">In Christ, dying</span>
+                        <span class="line">In God, withdrawn</span>
+                    </div>
+                    <div class="stanza">
+                        <span class="line">And yet</span>
+                        <span class="line">And yet</span>
+                        <span class="line">And yet</span>
+                    </div>
+                </div>
+                <div class="section">
+                    <span class="section-number">II.</span>
+                    <div class="stanza">
+                        <span class="line">In the garden, the man prays</span>
+                        <span class="line">In prayer, each whisper tended</span>
+                        <span class="line">In darkness, no detail missed</span>
+                        <span class="line">In waiting, transformed by weight</span>
+                        <span class="line">In spirit, secretly sprouting</span>
+                        <span class="line">In presence, fullness complete</span>
+                        <span class="line">In absence, perfectly held</span>
+                        <span class="line">In Christ, rising</span>
+                        <span class="line">In God, inflowing</span>
+                    </div>
+                    <div class="stanza">
+                        <span class="line">And yet</span>
+                        <span class="line">And yet</span>
+                        <span class="line">And yet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacer 5 -->
+    <div class="spacer"></div>
+
+    <!-- Poem 5: Dish -->
+    <section class="poem-section poem-5" id="dish">
+        <div class="poem-content">
+            <h2 class="poem-title">Dish</h2>
+            <div class="poem-body">
+                <div class="stanza">
+                    <span class="line">You are standing at the sink</span>
+                    <span class="line">watching water find its way</span>
+                    <span class="line">around the curves of a bumpy white bowl,</span>
+                    <span class="line">how it clings for just a moment</span>
+                    <span class="line">to the rim before letting go.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Through the window above the sink</span>
+                    <span class="line">the sky is turning cotton candy,</span>
+                    <span class="line">pink and gold threads spun</span>
+                    <span class="line">above dark branches</span>
+                    <span class="line">where a cardinal lands</span>
+                    <span class="line">and calls to the morning</span>
+                    <span class="line">you almost missed while</span>
+                    <span class="line">the sun rises just out of sight,</span>
+                    <span class="line">painting everything</span>
+                    <span class="line">with this particular light</span>
+                    <span class="line">that only happens now,</span>
+                    <span class="line">at exactly this moment.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">Your hands move without your thinking,</span>
+                    <span class="line">turning the bowl, rinsing,</span>
+                    <span class="line">feeling its unique surface</span>
+                    <span class="line">against your palms as you</span>
+                    <span class="line">lift it from the water</span>
+                    <span class="line">and reach for the towel,</span>
+                    <span class="line">drying each curve carefully,</span>
+                    <span class="line">your fingers learning again</span>
+                    <span class="line">the peculiar texture</span>
+                    <span class="line">of this familiar thing.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">You realize you've been standing here</span>
+                    <span class="line">longer than necessary.</span>
+                    <span class="line">The bowl was clean minutes ago.</span>
+                    <span class="line">But your breathing has settled</span>
+                    <span class="line">into something steady,</span>
+                    <span class="line">and that problem you've been carrying;</span>
+                    <span class="line">the one that felt so heavy this morning,</span>
+                    <span class="line">suddenly has edges</span>
+                    <span class="line">you can see around.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">The light has changed while you weren't watching.</span>
+                    <span class="line">Everything is the same kitchen,</span>
+                    <span class="line">the same morning,</span>
+                    <span class="line">the same hands holding</span>
+                    <span class="line">the same dish towel,</span>
+                    <span class="line">but you are looking at it</span>
+                    <span class="line">with eyes that remember</span>
+                    <span class="line">how to see.</span>
+                </div>
+
+                <div class="stanza">
+                    <span class="line">You hang the towel on its hook</span>
+                    <span class="line">and notice the small satisfaction</span>
+                    <span class="line">in this simple gesture,</span>
+                    <span class="line">the way your mind feels</span>
+                    <span class="line">like a room someone just</span>
+                    <span class="line">opened the windows in.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for fade effect
+        const poemSections = document.querySelectorAll('.poem-section');
+        const poemBodies = document.querySelectorAll('.poem-body');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const poemBody = entry.target.querySelector('.poem-body');
+
+                if (entry.isIntersecting) {
+                    // In view
+                    poemBody.style.opacity = '1';
+                } else {
+                    // Out of view (above)
+                    poemBody.style.opacity = '0.4';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize all poem bodies with full opacity
+        poemBodies.forEach(body => {
+            body.style.opacity = '1';
+        });
+
+        // Observe all poem sections
+        poemSections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
